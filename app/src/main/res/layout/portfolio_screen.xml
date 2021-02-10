@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/header_img" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/profile_pic"
+            android:layout_gravity="center"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#ffffff"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ankit Dubey"
+        android:textColor="@color/black"
+        android:layout_marginLeft="8dp"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="He is experienced level Android Developer, started his career as Technical Trainer and then moved to software development. \n\nHe has good knowledge in Java, Kotlin, Flutter and Android."
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14dp"
+        />
+
+
+
+
+
+
+</LinearLayout>
