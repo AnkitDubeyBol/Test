@@ -52,11 +52,13 @@
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flow_wrapMode="chain"
-        app:flow_maxElementsWrap="4"
-        app:flow_horizontalStyle="spread"
         app:constraint_referenced_ids="btn_first,btn_second,btn_third,btn_four,btn_five,btn_six"
-        />
+        app:flow_horizontalStyle="spread"
+        app:flow_maxElementsWrap="4"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
