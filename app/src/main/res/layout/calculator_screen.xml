@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -65,6 +66,18 @@
     </RelativeLayout>
 
 
+    <TextView
+        android:id="@+id/answer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_light"
+        android:layout_gravity="right"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,13 +100,13 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_subtr"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            app:backgroundTint="@color/light_yellow"
+            android:layout_weight="1"
+            android:text="-"
             android:textColor="@color/black"
-            android:text="-"/>
+            app:backgroundTint="@color/light_yellow" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_mul"
