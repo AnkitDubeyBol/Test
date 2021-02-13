@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calculator_screen)
 
-
         plusButton = findViewById(R.id.btn_add)
         minusButton = findViewById(R.id.btn_subtr)
         multiplyButton = findViewById(R.id.btn_mul)
@@ -31,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         firstET = findViewById(R.id.et_first)
         secondET = findViewById(R.id.et_second)
         answerTV = findViewById(R.id.answer_tv)
-
 
         plusButton?.setOnClickListener {
             val firstNumber = firstET?.text.toString()
@@ -52,15 +50,59 @@ class MainActivity : AppCompatActivity() {
         }
 
         minusButton?.setOnClickListener {
-            println("Minus button clicked...")
+            val firstNumber = firstET?.text.toString()
+            val secondNumber = secondET?.text.toString()
+
+            if(firstNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter first number...", Toast.LENGTH_SHORT).show()
+            }
+            else if(secondNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter second number...", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val total = firstNumber.toInt() - secondNumber.toInt()
+                answerTV?.text = "Total : $total"
+            }
         }
 
         multiplyButton?.setOnClickListener {
-            println("Multiply button clicked...")
+            val firstNumber = firstET?.text.toString()
+            val secondNumber = secondET?.text.toString()
+
+            if(firstNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter first number...", Toast.LENGTH_SHORT).show()
+            }
+            else if(secondNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter second number...", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val total = firstNumber.toInt() * secondNumber.toInt()
+                answerTV?.text = "Total : $total"
+            }
         }
 
         divButton?.setOnClickListener {
-            println("Div button clicked...")
+            val firstNumber = firstET?.text.toString()
+            val secondNumber = secondET?.text.toString()
+
+            if(firstNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter first number...", Toast.LENGTH_SHORT).show()
+            }
+            else if(secondNumber.isNullOrEmpty()){
+                Toast.makeText(this, "Ama miyan! enter second number...", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val i = firstNumber.toInt()
+                val j = secondNumber.toInt()
+
+                if(j==0){
+                    Toast.makeText(this, "Can not divide by Zero!", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    val total = i/j
+                    answerTV?.text = "Total : $total"
+                }
+            }
         }
 
     }
